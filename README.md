@@ -50,3 +50,46 @@ Plugin supports additional tags in comment body.
 ### Field tags
 
 `@mandatory` adds mandatory flag to field.
+
+## Samples
+
+Input:
+```proto
+syntax = "proto3";
+
+option java_package = "test";
+
+// Test multiline
+// comment for message
+message TestMessage {
+    // Optional Int32 parameter
+    int32 optional_int32 = 1;
+
+    // Mandatory Int32 parameter
+    // @mandatory
+    int32 mangatory_int32 = 2;
+
+    // External message reference
+    ExternalMessage external = 3;
+}
+
+message ExternalMessage {
+    string other_field = 1;
+}
+```
+
+For message `TestMessage` gives:
+```asciidoc
+[[message-.TestMessage]]
+.`TestMessage` -  Test multiline  comment for message
+|===
+|Field |Type |Description |Options
+
+|optional_int32 |int32 | Optional Int32 parameter  |
+
+|mangatory_int32 |int32 | Mandatory Int32 parameter    | yes
+
+|external |<<message-.ExternalMessage>> | External message reference  |
+
+|===
+```
