@@ -5,4 +5,4 @@ target
 .idea
 *.iml
 .DS_Store
-
+release.properties
