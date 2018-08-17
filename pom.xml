@@ -5,7 +5,7 @@
 
     <groupId>com.unitedtraders.grpc</groupId>
     <artifactId>grpc-doc-generator</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>GRPC Documentation Generator</name>
@@ -134,7 +134,7 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:UnitedTraders/grpc-doc-generator.git</developerConnection>
-      <tag>v0.0.1</tag>
+      <tag>HEAD</tag>
   </scm>
 
 </project>
